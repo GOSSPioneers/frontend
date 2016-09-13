@@ -14,7 +14,7 @@
         .state('dashboard', {
           url: '/dashboard',
           templateUrl: 'app/pages/dashboard/dashboard.html',
-          title: 'Log Analytics Dashboard',
+          title: 'Logs Dashboard',
           sidebarMeta: {
             icon: 'ion-android-home',
             order: 0,

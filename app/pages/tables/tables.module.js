@@ -16,7 +16,7 @@
           template : '<ui-view></ui-view>',
           abstract: true,
           controller: 'TablesPageCtrl',
-          title: 'Tables',
+          title: 'Tables Samples',
           sidebarMeta: {
             icon: 'ion-grid',
             order: 300,

@@ -6,10 +6,10 @@
   'use strict';
 
   angular.module('BlurAdmin.pages.dashboard')
-      .controller('DashboardLineChartCtrl', DashboardLineChartCtrl);
+      .controller('DashboardLineChartCtrlSecond', DashboardLineChartCtrlSecond);
 
   /** @ngInject */
-  function DashboardLineChartCtrl(baConfig, layoutPaths, baUtil, DashboardLineChartService) {
+  function DashboardLineChartCtrlSecond(baConfig, layoutPaths, baUtil, DashboardLineChartService) {
 
     var vm = this;
     vm.service = DashboardLineChartService;
@@ -20,14 +20,14 @@
     var graphColor = baConfig.theme.blur ? '#1C2B36' : layoutColors.primary;
 
     vm.loadChart = function() {  
-      vm.service.getCardInsertByHour().then(function(response) {        
+      vm.service.getFuellingByHour().then(function(response) {
         var parsedArray = [];
         angular.forEach(response, function(data){
           var parsedDate = new Date(data.key);
           parsedArray.push( { date : parsedDate, count: data.count } );
         });
         vm.chartData = parsedArray;
-        var chart = AmCharts.makeChart('amchart', {
+        var chart = AmCharts.makeChart('amchart2', {
           type: 'serial',
           theme: 'blur',
           marginTop: 15,
