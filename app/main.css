@@ -2653,37 +2653,73 @@ button.progress-button.btn.btn-danger {
   -webkit-transition: none;
   transition: none; }
 
-.i-face {
-  display: inline-block;
-  background: url("../assets/img/face.svg") no-repeat center;
-  background-size: contain;
-  vertical-align: middle;
-  width: 80px;
-  height: 80px; }
+.i-text {
+  position: relative;
+}
 
-.i-money {
-  display: inline-block;
-  background: url("../assets/img/money.svg") no-repeat center;
-  background-size: contain;
-  vertical-align: middle;
-  width: 80px;
-  height: 80px; }
+.i-text:before {
+    content: "\f0f6";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    top: -10px;
+    padding-left: 20px;
+}
 
-.i-person {
-  display: inline-block;
-  background: url("../assets/img/person.svg") no-repeat center;
-  background-size: contain;
-  vertical-align: middle;
-  width: 80px;
-  height: 80px; }
+.i-station {
+  position: relative;
+}
 
-.i-refresh {
-  display: inline-block;
-  background: url("../assets/img/refresh.svg") no-repeat center;
-  background-size: contain;
-  vertical-align: middle;
-  width: 80px;
-  height: 80px; }
+.i-station:before {
+    content: "\f015";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    top: -10px;
+    padding-left: 20px;
+  }
+
+.i-device {
+  position: relative;
+}
+
+.i-device:before {
+    content: "\f1e6";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    top: -10px;
+    padding-left: 20px;
+}
+
+.i-comp {
+  position: relative;
+}
+
+.i-comp:before {
+    content: "\f12e";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 48px;
+    top: -10px;
+    padding-left: 20px;
+  }
 
 ::-webkit-scrollbar {
   width: 0.5em;
@@ -3751,7 +3787,7 @@ th {
   height: calc(100vh - 283px); }
 
 .panel {
-  color: #666666;
+  color: #ffffff;
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -3799,12 +3835,12 @@ th {
   height: 100%; }
 
 .panel > .panel-heading {
-  color: #666666;
+  color: #ffffff;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
 
 .panel > .panel-footer {
-  color: #666666; }
+  color: #ffffff; }
 
 .panel-heading, .panel-footer {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -5477,13 +5513,9 @@ a.fc-more {
   @media screen and (max-width: 700px) {
     .pie-charts .pie-chart-item-container {
       width: 100%; } }
-  .pie-charts .pie-chart-item {
+  .pie-charts .pie-chart-item .chart-icon{
     position: relative; }
-    .pie-charts .pie-chart-item .chart-icon {
-      position: absolute;
-      right: 0px;
-      top: 3px;
-      z-index: -1; }
+
   @media screen and (min-width: 1325px) and (max-width: 1650px), (min-width: 700px) and (max-width: 830px), (max-width: 400px) {
     .pie-charts .chart-icon {
       display: none; } }
